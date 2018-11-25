@@ -1,0 +1,279 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+          /*==================================================MyCSS===========================================================*/
+
+*{  font-family: 'Roboto', sans-serif;
+	
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	
+}
+body, html{
+	width: 100%;
+	height: 100vh;
+}
+body{
+	background-color: #80bfff;
+	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
+	font-weight: normal;
+	font-weight: italic; 
+	
+}
+.Survey{
+	font-size: 30px;
+	text-align: center;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+
+}
+#Purple{
+	
+	background-color: #bf40bf;
+	padding-right: 1rem;
+	padding-left: 1rem;
+	padding-bottom: 0.3rem;
+}
+#Purple h3{
+	font-size: 22px;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	text-align: center;
+}
+
+#name label, #email label{
+	display: block;
+	padding-top: 0.3rem;
+	padding-bottom: 0.3rem;
+}
+
+#name input[type=text], #email input{
+	width: 300px;
+	padding: 5px 5px;
+	border: 1px solid #8c8c8c;
+	margin: 5px 5px;
+	
+}
+#date{
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	
+}
+#checkbox, #radio{
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+#role p{
+	
+	display: inline;
+}
+.q{
+	font-size: 17px;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+}
+#role select{
+	width: 200px;
+	padding: 5px 5px;
+}
+#pr{
+	overflow: hidden;
+}
+
+#pr label, #IT label{
+	display: block;
+}
+.center{
+	max-width: 100%;
+	font-size: 1rem;
+	margin-right: auto;
+	margin-left: auto;
+	display: block;
+}
+.center2{
+	max-width: 100%;
+	
+	overflow: hidden;
+}
+
+.center  input, .center2 input{
+	float: left;
+	
+	margin-right: 0.5rem;
+	margin-left: 0.5rem;
+	
+	
+}
+
+.center label, .center2 label, #Other{
+	
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
+}
+
+
+
+.q{
+	clear: both;
+	display: block;
+}
+#wrapper, #wrapper2, #wrapper3{
+	position: relative;
+	max-width: 250px;
+	padding-top: 0.6rem;
+	display: none;
+}
+
+
+#pop, #pop2, #pop3{
+    font-size: 12px;
+	color: red;
+	display: block;
+	max-width: 250px;
+	text-align: center;
+	background-color: white;
+	padding-top: 0.3rem;
+	padding-bottom: 0.3rem;
+	padding-right: 0.3rem;
+	padding-left: 0.3rem;
+	margin-left: 30px;
+	border-radius: 10px;   
+}
+
+#pop::before, #pop2::before, #pop3::before{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 16%;
+    width: 0;
+	height: 0;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-bottom: 10px solid white;
+	
+}
+#submit button {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	font-size: 17px;
+	
+	padding: 5px 5px;
+	border: none;
+	background-color: /*hsla(48, 100%, 60%, 70%) */ hsla(60, 20%, 60%, 80%);
+	cursor: pointer;
+}
+#Purple input:hover{
+	border: 2px solid #2eb82e;
+}
+
+
+
+
+@media(min-width: 600px){
+	#Purple{
+	width: 50rem;	
+	margin-right: auto;
+	margin-left: auto;
+	display: block;
+    margin-bottom: 2rem;
+	}
+	.first-column{
+		float: left;
+		margin-left: 5rem;
+	}
+	.second-column{
+		float: right;
+		margin-right: 35%;
+	}
+	.first-column2{
+		float: left;
+		margin-left: 5rem;
+	}
+	.second-column2{
+		float: right;
+		margin-right: 6.5rem;
+	}
+	#Other{
+		max-width: 500px;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+		margin-top: 0.7rem;
+		margin-bottom: 0.7rem;
+		
+		
+	}
+	
+	
+}
+@media(max-width: 600px){
+	#Purple{
+		min-width: 100%;
+	}
+	#role select{
+		display: block;
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+	} 
+	
+#name input[type=text], #email input {
+	max-width: 200px;
+	}
+	#career{
+	margin-top: 0.3rem;
+	margin-bottom: 0.3rem;
+	
+}
+	
+}
+
+
+
+
+
+
+
+

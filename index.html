@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">	
+  <title>Survey Form</title>	
+</head>
+<body>
+ <div id="title">
+	 <h1 class="Survey">Survey Form</h1>
+	 
+ </div>	
+ <div id="Purple">
+  <div id="description">
+	<h3>Personal informations</h3>
+	<form id="name">
+	  <label for ="first-name">First Name</label>
+	  <input type = "text"	id="first" name=" first-name" placeholder="First-Name" onclick="hideFunction()">
+	<div id="wrapper">	
+	  <p id="pop"></p>
+    </div>	
+	  <label for="last-name">Last Name</label>	
+	  <input type= "text" id="last" name=" last-name" placeholder="Last-Name" onclick="hide2Function()">	
+	  <div id="wrapper2">	
+	  <p id="pop2"></p>
+    </div>		
+	</form>
+	
+	<form id="email">
+		<label for="Email">Email</label>
+		<input type="text" id="Email" name="Email" placeholder="Email" onclick="hide3Function()">
+	<div id="wrapper3">	
+	  <p id="pop3"></p>
+    </div>		
+	</form>  
+	<form id="date">
+	  Date of birth
+	  <select id="month">
+	  </select>
+      <select id="day">
+	  </select>
+	  <select  id="year">  
+	  </select>
+	</form>
+	
+	<h3>Professional informations</h3>
+	<form id="role">
+		<p class="q">Which option best describes your current role?</p>
+	  <select name="Role">
+		<option value="role">Student</option>
+		<option value="role">Worker</option>
+		<option value="role">Freelancer</option>
+		<option value="role">Other</option>   
+	  </select>
+	 </form>
+	  <p class="q">What programming languages do you use the most?</p> 
+	 <form id="pr"> 
+	  
+	 	
+		<div class="center">
+		 <div class="first-column"> 
+		  <label class="container">Java
+		   <input type="checkbox">
+		   <span class="checkmark"></span>   
+		  </label>
+		  <label class="container">JavaScript
+		   <input type="checkbox" >
+		   <span class="checkmark"></span>   
+		  </label>
+		   <label class="container">C++
+		   <input type="checkbox">
+		   <span class="checkmark"></span>   
+		  </label>
+		  <label class="container">Python
+		   <input type="checkbox">
+		   <span class="checkmark"></span>   
+		  </label>
+		</div>
+		<div class="second-column">  
+		  <label class="container">Ruby
+		   <input  type="checkbox" id="check" > 
+		   <span class="checkmark"></span>   
+		  </label>
+		  <label class="container">Swift
+		   <input type="checkbox"> 
+		   <span class="checkmark"></span>   
+		  </label>
+		  <label class="container">Rust
+		   <input type="checkbox">
+		   <span class="checkmark"></span>   
+		  </label>
+		  <label class="container">Other
+		   <input type="checkbox">
+		   <span class="checkmark"></span>   
+		  </label>
+		 </div>	
+	    </div>
+	   
+	 </form>	
+	 <p class="q">What is the Tech Career where you work or you would want to work?</p> 
+	 <form id="IT"> 
+	  <div class="center2">
+	   <div class="first-column2">  
+		<label class="container">Web Developer
+		 <input type="radio"  name="radio">
+		 <span class="checkmark"></span>
+		</label>
+	   
+		<label class="container">Software Developer
+		 <input type="radio"  name="radio">
+		 <span class="checkmark"></span>
+		</label>
+		<label class="container">Database Administrator
+		 <input type="radio"  name="radio">
+		 <span class="checkmark"></span>
+		</label>
+		<label class="container">Information Security Analyst
+		 <input type="radio"  name="radio">
+		 <span class="checkmark"></span>
+		</label>
+	   </div>
+	   <div class="second-column2"> 
+		<label class="container">Computer Network Architect
+		 <input type="radio"  name="radio">
+		 <span class="checkmark"></span>
+		</label>
+		<label class="container">Computer Support Specialist
+		 <input type="radio"  name="radio">
+		 <span class="checkmark"></span>
+		</label>
+		<label class="container">Computer Systems Analyst
+		 <input type="radio"  name="radio">
+		 <span class="checkmark"></span>
+		</label> 
+	    <div class="ci">	   
+		 <label id="ci" class="container" >Computer  Research Scientist
+		 <input type="radio"  name="radio">
+		 <span class="checkmark"></span>
+		 </label> 
+        </div>	
+	   </div>  
+	  </div>	  
+	 </form>
+	 <form id="Other">	 
+		 <label for="other">Write other Tech Career</label>
+		<input type="text" id="career" name="career">	
+	 	
+	</form>	
+	 <div id="submit">
+		<button onclick="popFunction()">Submit</button> 
+	 </div>	
+	  
+		
+	  
+  </div>
+ </div>
+ <script>
+	
+		var i= 1;
+	    var y= 1920;
+	    var x= 1;
+		var text="";
+	    var text2=" ";
+	    var text3=" ";
+	    for(x=1; x<=12; x++){
+		  text3+=  "<option>" + x +"</option>" + "<br>";	
+		}
+	    document.getElementById("month").innerHTML = text3;
+	 
+		for(i=1; i<=31; i++){
+		  text+=  "<option>" + i +"</option>" + "<br>";	
+		}
+	    document.getElementById("day").innerHTML = text;
+	 
+	    for (y=1920; y<=2018; y+=1){
+		 text2+=  "<option>" + y +"</option>" + "<br>";		
+		}
+		
+	     document.getElementById("year").innerHTML = text2;
+	 
+	 function hideFunction(){
+		  var message = document.getElementById("wrapper");
+		
+		  message.style.display="none";	 
+	 }
+	  function hide2Function(){
+		  var message = document.getElementById("wrapper2");
+		
+		  message.style.display="none";	 
+	 }
+	 function hide3Function(){
+		  var message = document.getElementById("wrapper3");
+		  message.style.display="none";	 
+	 }
+	 
+	 function popFunction(){
+		 var message, x, y, a, b, c, d, e, f;
+		 message= document.getElementById("pop");
+		 message.innerHTML= "";
+		 x= document.getElementById("first").value;
+		 y=document.getElementById("wrapper");
+		 
+		 
+		 try{
+			 if(x == "") throw "You have to complete this field";
+			 if(isNaN(x) == isNaN("")) throw "Numbers are not allowed";
+			 
+			    
+			 
+			 
+		 } catch(err){
+			 message.innerHTML =  err; 
+			 y.style.display = "block";
+			 location.href= "#first"; 
+			 
+		 }
+		  a= document.getElementById("pop2");
+		  a.innerHTML= "";
+		  b= document.getElementById("last").value;
+		  c=document.getElementById("wrapper2");
+		 
+		 try{
+			 if(b == "") throw "You have to complete this field";
+			 if(isNaN(b) == isNaN("")) throw "Numbers are not allowed";
+			 
+			    
+			 
+			 
+		 } catch(err){
+			 a.innerHTML =  err; 
+			 c.style.display = "block";
+			 location.href= "#last"; 
+			 
+		 } 
+		  d= document.getElementById("pop3");
+		  d.innerHTML= "";
+		  e= document.getElementById("Email").value;
+		  f=document.getElementById("wrapper3");
+		  try{
+			 if( e== "") throw "You have to complete this field";
+			
+			 
+			    
+			 
+			 
+		 } catch(err){
+			 d.innerHTML =  err; 
+			 f.style.display = "block";
+			 location.href= "#Email"; 
+			 
+		 }  
+		 
+		 
+	 } 
+	 
+	 
+ </script>	
+</body>	
+</html>
